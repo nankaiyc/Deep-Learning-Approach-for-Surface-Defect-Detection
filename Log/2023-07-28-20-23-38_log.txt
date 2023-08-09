@@ -1,0 +1,12 @@
+[INFO]   2023-07-28 20:23:38,531    start testing
+[INFO]   2023-07-28 20:28:30,114     total number of samples = 159
+[INFO]   2023-07-28 20:28:30,114    positive = 22
+[INFO]   2023-07-28 20:28:30,114    negative = 137
+[INFO]   2023-07-28 20:28:30,115    TP = 21
+[INFO]   2023-07-28 20:28:30,115    NP = 1
+[INFO]   2023-07-28 20:28:30,115    TN = 136
+[INFO]   2023-07-28 20:28:30,115    FN = 1
+[INFO]   2023-07-28 20:28:30,115    accuracy(准确率) = 0.9874
+[INFO]   2023-07-28 20:28:30,115    prescision（查准率） = 0.9545
+[INFO]   2023-07-28 20:28:30,115    recall（查全率） = 0.9545
+[INFO]   2023-07-28 20:28:30,115    the visualization saved in ./visualization/test

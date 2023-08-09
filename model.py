@@ -16,13 +16,13 @@ class Model(object):
         self.__session = sess
         self.is_training=True
         self.__learn_rate = param["learn_rate"]
-        self.__learn_rate=param["learn_rate"]
         self.__max_to_keep=param["max_to_keep"]
         self.__checkPoint_dir = param["checkPoint_dir"]
         self.__restore = param["b_restore"]
         self.__mode= param["mode"]
         self.is_training=True
         self.__batch_size = param["batch_size"]
+        self.__class_num = param["class_num"]
         if  self.__mode is "savaPb" :
             self.__batch_size = 1
         ################ Building graph
@@ -71,7 +71,7 @@ class Model(object):
                     mask=net
             return features,logits_pixel,mask
 
-        def DecisionNet(feature,mask, scope, is_training,num_classes=2, reuse=None):
+        def DecisionNet(feature,mask, scope, is_training,num_classes=self.__class_num, reuse=None):
             with tf.variable_scope(scope, reuse=reuse):
                 with slim.arg_scope([slim.conv2d],
                                     padding='SAME',

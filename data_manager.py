@@ -1,3 +1,4 @@
+import copy
 import re
 import os
 import numpy as np
@@ -12,34 +13,39 @@ class DataManager(object):
         """
         """
         self.shuffle=shuffle
-        self.data_list=dataList
-        self.data_size=len(dataList)
+        self.data_list=copy.deepcopy(dataList) * param["epochs_num"] if param["mode"] == "training" else dataList
+        self.data_size=len(self.data_list)
         self.data_dir=param["data_dir"]
         self.epochs_num=param["epochs_num"]
         self.batch_size = param["batch_size"]
-        self.number_batch = int(np.floor(len(self.data_list) /self.batch_size))
+        self.number_batch = int(np.floor(len(dataList) /self.batch_size))
         self.next_batch=self.get_next()
+        # print(self.data_size, self.number_batch, self.epochs_num)
 
     def get_next(self):
         dataset = tf.data.Dataset.from_generator(self.generator, (tf.float32, tf.int32,tf.int32, tf.string))
-        dataset = dataset.repeat(self.epochs_num)
+        # dataset = dataset.repeat(self.epochs_num)
         if self.shuffle:
             dataset = dataset.shuffle(self.batch_size*3+200)
+            # dataset = dataset.shuffle(self.data_size * self.epochs_num + 100)
         dataset = dataset.batch(self.batch_size)
         iterator = dataset.make_one_shot_iterator()
         out_batch = iterator.get_next()
         return out_batch
 
     def generator(self):
-        for index in range(len(self.data_list)):
+        for index in range(self.data_size):
             file_basename_image,file_basename_label = self.data_list[index]
             image_path = os.path.join(self.data_dir, file_basename_image)
-            label_path= os.path.join(self.data_dir, file_basename_label)
             image= self.read_data(image_path)
-            label = self.read_data(label_path)
-            label_pixel,label=self.label_preprocess(label)
             image = (np.array(image[:, :, np.newaxis]))
+
+            label_path= os.path.join(self.data_dir, file_basename_label)
+            label = self.read_data(label_path)
+            # label_pixel,label=self.label_preprocess(label)
+            label_pixel,label=self.label_preprocess_MagneticTile(label, file_basename_label)
             label_pixel = (np.array(label_pixel[:, :, np.newaxis]))
+
             yield image, label_pixel,label, file_basename_image
 
     def read_data(self, data_name):
@@ -58,6 +64,13 @@ class DataManager(object):
             label=1
         return  label_pixel,label
 
+    def label_preprocess_MagneticTile(self,label, file_basename_label):
+        label = cv2.resize(label, (int(IMAGE_SIZE[1]/8), int(IMAGE_SIZE[0]/8)))
+        label_pixel=self.ImageBinarization(label)
+        label = LABEL_MagneticTile[file_basename_label.split('/')[0]]
+        # print(file_basename_label, label)
+        return  label_pixel,label
+    
     def ImageBinarization(self,img, threshold=1):
         img = np.array(img)
         image = np.where(img > threshold, 1, 0)

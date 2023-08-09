@@ -1,0 +1,2 @@
+[INFO]   2023-08-06 01:31:26,256    start training segment net with step 99
+[INFO]   2023-08-06 03:46:03,903    epoch:[99] ,train_mode:segment, loss: 88.69174423068762

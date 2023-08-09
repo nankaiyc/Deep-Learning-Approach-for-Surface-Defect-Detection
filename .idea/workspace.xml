@@ -5,102 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8c414e4-01bc-4ab4-b476-1021d08de849" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/FCNN_OCR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FCNN_OCR.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoint/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoint/checkpoint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos31_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos31_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos31_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos31_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos31_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos31_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos31_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos31_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos31_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos31_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos31_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos31_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos31_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos31_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos31_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos31_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos32_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos32_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos32_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos32_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos32_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos32_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos32_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos32_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos32_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos32_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos32_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos32_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos32_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos32_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos32_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos32_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos33_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos33_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos33_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos33_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos33_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos33_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos34_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos34_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos34_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos34_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos34_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos34_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos34_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos34_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos34_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos34_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos35_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos35_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos35_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos35_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos35_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos35_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos36_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos36_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos36_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos36_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos36_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos36_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos37_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos37_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos37_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos37_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos37_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos37_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos38_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos38_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos38_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos38_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos38_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos38_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos38_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos38_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos39_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos39_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos39_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos39_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos39_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos39_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos39_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos39_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos40_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos40_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos40_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos40_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos40_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos40_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos41_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos41_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos41_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos41_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos41_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos41_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos42_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos42_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos42_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos42_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos42_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos42_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos42_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos42_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos43_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos43_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos43_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos43_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos43_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos43_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos43_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos43_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos43_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos43_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos44_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos44_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos44_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos44_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos44_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos44_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos44_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos44_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos45_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos45_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos45_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos45_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos45_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos45_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos45_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos45_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos46_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos46_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos46_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos46_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos46_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos46_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos46_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos46_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos46_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos46_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos47_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos47_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos47_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos47_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos47_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos47_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos47_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos47_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos48_Part0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos48_Part0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos48_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos48_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos48_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos48_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos48_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos48_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos48_Part5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos48_Part5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos48_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos48_Part6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos48_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos48_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos49_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos49_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos49_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos49_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos49_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos49_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos49_Part7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos49_Part7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos50_Part1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos50_Part1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos50_Part2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos50_Part2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos50_Part3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos50_Part3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos50_Part4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos50_Part4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/test/kos50_Part6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/test/kos50_Part6.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +20,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/wwp" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -145,7 +76,10 @@
     <option name="width" value="1918" />
     <option name="height" value="1038" />
   </component>
-  <component name="ProjectId" id="2TByJI0zaaNY5BSBxPptFEnCXcM" />
+  <component name="ProjectId" id="2TjlmoHOllhPK0pFEnni1u9uw9l" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -171,40 +105,22 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Deep_Learning/Deep-Learning-Approach-for-Surface-Defect-Detection-Magnetic&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Deep_Learning/Deep-Learning-Approach-for-Surface-Defect-Detection&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Deep_Learning\Deep-Learning-Approach-for-Surface-Defect-Detection-Magnetic\Datasets" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.run">
-    <configuration name="agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FCNN_OCR" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/agent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="data_manager" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FCNN_OCR" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -295,7 +211,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.agent" />
       <item itemvalue="Python.data_manager" />
       <item itemvalue="Python.front" />
       <item itemvalue="Python.run_" />
@@ -304,7 +219,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.run" />
-        <item itemvalue="Python.agent" />
         <item itemvalue="Python.run_" />
         <item itemvalue="Python.front" />
         <item itemvalue="Python.data_manager" />
@@ -322,16 +236,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556601548494</updated>
-      <workItem from="1690530696520" duration="353000" />
-      <workItem from="1690700752479" duration="6570000" />
-      <workItem from="1690787681213" duration="8168000" />
-      <workItem from="1690851229381" duration="12924000" />
-      <workItem from="1690950119999" duration="14542000" />
-      <workItem from="1691053166301" duration="5365000" />
-      <workItem from="1691060711997" duration="1886000" />
-      <workItem from="1691307156798" duration="9419000" />
-      <workItem from="1691474055536" duration="16933000" />
-      <workItem from="1691564477839" duration="1752000" />
+      <workItem from="1691564535040" duration="2290000" />
+      <workItem from="1691579233320" duration="652000" />
     </task>
     <servers />
   </component>
@@ -378,8 +284,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Deep_Learning_Approach_for_Surface_Defect_Detection$run.coverage" NAME="run Coverage Results" MODIFIED="1691581685552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Deep_Learning_Approach_for_Surface_Defect_Detection$agent.coverage" NAME="agent Coverage Results" MODIFIED="1691481170544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Deep_Learning_Approach_for_Surface_Defect_Detection_Magnetic$run.coverage" NAME="run Coverage Results" MODIFIED="1691574775122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/agent.py">

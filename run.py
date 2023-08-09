@@ -9,7 +9,7 @@ DefaultParam = {
     "batch_size": 1,
     "learn_rate": 0.001,
     "momentum": 0.9,                 # 优化器参数(disable)
-    "data_dir": "../Datasets/KolektorSDD",  # 数据路径
+    "data_dir": "../Datasets/KolektorSDD-boxes",  # 数据路径
     "checkPoint_dir": "checkpoint",  # 模型保存路径
     "Log_dir": "Log",  # 日志打印路径
     "valid_ratio": 0,  # 数据集中用来验证的比例  (disable)
@@ -18,6 +18,7 @@ DefaultParam = {
     "max_to_keep": 10,  # 最多保存几个模型
     "b_restore": True,  # 导入参数
     "b_saveNG": True,  # 测试时是否保存错误的样本  (disable)
+    "class_num": 6,  # classes count
 }
 
 def parse_arguments():
@@ -39,6 +40,11 @@ def parse_arguments():
     )
     parser.add_argument(
         "--train_total",
+        action="store_true",
+        help="Define if we wanna to train the total net"
+    )
+    parser.add_argument(
+        "--train_data",
         action="store_true",
         help="Define if we wanna to train the total net"
     )
@@ -98,6 +104,14 @@ def parse_arguments():
         help="How many iteration in training",
         default=DefaultParam["epochs_num"]
     )
+    parser.add_argument(
+        "-cn",
+        "--class_num",
+        type=int,
+        nargs="?",
+        help="How many iteration in training",
+        default=DefaultParam["class_num"]
+    )
 
 
     return parser.parse_args()
@@ -121,6 +135,9 @@ def main():
     if args.train_total:
         param["mode"]="training"
         param["train_mode"] = "total"
+    if args.train_data:
+        param["mode"]="training"
+        param["train_mode"] = "data"
     if args.test :
         param["mode"] = "testing"
     if args.pb :
@@ -132,6 +149,7 @@ def main():
     param["batch_size"] = args.batch_size
     param["epochs_num"] = args.epochs_num
     param["checkPoint_dir"] = args.checkPoint_dir
+    param["class_num"] = args.class_num
 
     agent=Agent(param)
     agent.run()

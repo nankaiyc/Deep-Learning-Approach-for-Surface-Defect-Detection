@@ -7,6 +7,8 @@ from  model import  Model
 from config import  *
 import utils
 from datetime import datetime
+from tqdm import tqdm
+
 class Agent(object):
 	def __init__(self,param):
 
@@ -27,7 +29,8 @@ class Agent(object):
 			print("got a unexpected mode ,please set the mode  'training', 'testing' or 'savePb' ")
 
 	def init_datasets(self):
-		self.Positive_data_list,self.Negative_data_list=self.listData1(self.__Param["data_dir"])
+		# self.Positive_data_list,self.Negative_data_list=self.listData1(self.__Param["data_dir"])
+		self.Positive_data_list,self.Negative_data_list=self.listDataMagneticTile(self.__Param["data_dir"])
 		if self.__Param["mode"] is "training":
 			self.DataManager_train_Positive = DataManager(self.Positive_data_list, self.__Param)
 			self.DataManager_train_Negative = DataManager(self.Negative_data_list, self.__Param)
@@ -40,21 +43,23 @@ class Agent(object):
 			raise Exception('got a unexpected  mode ')
 
 	def train(self,mode):
-		if mode not in ["segment","decision","total"]:
+		if mode not in ["segment","decision","total","data"]:
 			raise Exception('got a unexpected  training mode ,options :{segment,decision}')
 		with self.__sess.as_default():
-			self.logger.info('start training {} net'.format(mode))
-			for i in range(self.model.step, self.__Param["epochs_num"] + self.model.step):
+			self.logger.info('start training {} net with step {}'.format(mode, self.model.step))
+			for i in tqdm(range(self.model.step, self.__Param["epochs_num"] + self.model.step)):
 				#epoch start
 				iter_loss = 0
-				for batch in range(self.DataManager_train_Positive.number_batch):
+				for index  in  range(2):
 					#batch start
-					for index  in  range(2):
+					if index==0 :
+						data_manager = self.DataManager_train_Positive
+					else:
+						data_manager = self.DataManager_train_Negative
+
+					for batch in range(data_manager.number_batch):
 						#corss training the positive sample and negative sample
-						if index==0 :
-							img_batch, label_pixel_batch,label_batch, file_name_batch,  = self.__sess.run(self.DataManager_train_Positive.next_batch)
-						else:
-							img_batch, label_pixel_batch, label_batch, file_name_batch, = self.__sess.run(self.DataManager_train_Negative.next_batch)
+						img_batch, label_pixel_batch, label_batch, file_name_batch, = self.__sess.run(data_manager.next_batch)
 						loss_value_batch=0
 
 						if mode == "segment":
@@ -70,12 +75,17 @@ class Agent(object):
 														feed_dict={self.model.Image: img_batch,
 																   self.model.PixelLabel: label_pixel_batch,
 																   self.model.Label: label_batch})
+						else:
+							print(img_batch, label_pixel_batch,label_batch, file_name_batch)
+							return
+						
 						iter_loss+= loss_value_batch
 						#可视化
 						if i % self.__Param["valid_frequency"] == 0 and i>0:
 							mask_batch = self.__sess.run(self.model.mask, feed_dict={self.model.Image: img_batch})
 							save_dir = "./visualization/training_epoch-{}".format(i)
 							self.visualization(img_batch, label_pixel_batch, mask_batch, file_name_batch,save_dir)
+
 				self.logger.info('epoch:[{}] ,train_mode:{}, loss: {}'.format(self.model.step, mode,iter_loss))
 				#保存模型
 				if i % self.__Param["save_frequency"] == 0 or i==self.__Param["epochs_num"] + self.model.step-1:
@@ -100,19 +110,21 @@ class Agent(object):
 			count_FN = 0  # 假反例
 			DataManager=[self.DataManager_test_Positive,self.DataManager_test_Negative]
 			for index in range(2):
-				for batch in range(DataManager[index].number_batch):
+				for batch in tqdm(range(DataManager[index].number_batch)):
 					img_batch, label_pixel_batch,label_batch, file_name_batch,  = self.__sess.run(DataManager[index].next_batch)
 					mask_batch ,output_batch= self.__sess.run([self.model.mask,self.model.output_class],
 						feed_dict={self.model.Image: img_batch,})
 					self.visualization(img_batch, label_pixel_batch,mask_batch, file_name_batch,save_dir=visualization_dir)
 					for i, filename in enumerate(file_name_batch):
 						count +=1
-						if label_batch[i] == 1 and output_batch[i] == 1:
+						if label_batch[i] == 0 and output_batch[i] == 0:
 							count_TP += 1
-						elif label_batch[i] == 1:
+						elif label_batch[i] == 0:
 							count_FN += 1
-						elif output_batch[i] == 1:
+							self.logger.info("Image {} is label {} but output {}".format(file_name_batch[i], label_batch[i], output_batch[i]))
+						elif output_batch[i] == 0:
 							count_FP += 1
+							self.logger.info("Image {} is label {} but output {}".format(file_name_batch[i], label_batch[i], output_batch[i]))
 						else:
 							count_TN += 1
 			# 准确率
@@ -203,6 +215,46 @@ class Agent(object):
 			return Positive_examples_train,Negative_examples_train
 		if self.__Param["mode"] is "testing":
 			return Positive_examples_valid,Negative_examples_valid
+
+
+	def listDataMagneticTile(self,data_dir,test_ratio=0.2):
+		example_dirs = [x[1] for x in os.walk(data_dir)][0]
+
+		example_lists = {x: os.listdir('{}/{}/Imgs'.format(data_dir, x)) for x in example_dirs}
+
+		Positive_examples_train = []
+		Negative_examples_train = []
+		Positive_examples_valid = []
+		Negative_examples_valid = []
+
+		for i in range(len(example_dirs)):
+			example_dir = example_dirs[i]
+			example_list = example_lists[example_dir]
+			# 过滤label图片
+			example_list = [item for item in example_list if item.endswith('jpg')]
+			# 训练数据
+			data_len = len(example_list)
+			train_test_offset=int(np.floor(data_len*(1-test_ratio)))
+			examples = [[example_dir + '/Imgs/' + x, example_dir + '/Imgs/' + x.split('.')[0] + '.png'] for x in example_list]
+			
+			# slice 1/10, remeber to del
+			# alpha = 0.03
+			# examples = examples[:int(data_len*alpha)]
+			# train_test_offset = int(train_test_offset*alpha)
+			
+			if example_dir == 'MT_Free':
+				Positive_examples_train.extend(examples[:train_test_offset])
+				Positive_examples_valid.extend(examples[train_test_offset:])
+			else:
+				Negative_examples_train.extend(examples[:train_test_offset])
+				Negative_examples_valid.extend(examples[train_test_offset:])
+	     
+		if self.__Param["mode"] is "training":
+			return Positive_examples_train,Negative_examples_train
+		if self.__Param["mode"] is "testing":
+			return Positive_examples_valid,Negative_examples_valid
+
+
 
 
 

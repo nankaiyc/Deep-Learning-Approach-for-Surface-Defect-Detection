@@ -58,3 +58,11 @@ Tensorflow 1.12
    python run.py  --train_total
    ```
  
+# Step to change dataset
+  1. change listData method at agent.py L33
+  2. chnage label_preprocess at data_manager.py L39
+  3. change param class_num
+
+# Step to train
+  1. python run.py --train_segment --anew
+  2. python run.py  --train_decision
